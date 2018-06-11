@@ -21,11 +21,28 @@ class Ship extends Component {
 
     return (
       <div>
-        <p>
+        <table border="1">
+          <tr>
+            <td>Name</td><td>Model</td><td>Starship class</td><td>Manufacturer</td><td>Cost in credits</td><td>Length</td><td>Max atmosphering speed</td>
+          <td>Crew</td><td>Passengers</td><td>Cargo capacity</td><td>Consumbles</td><td>Hyperdrive rating</td><td>MGLT</td>
+          </tr>
             {ships.map(ship =>
-            <div key={ship.name}>{ship.name}, {ship.model}</div>
+            <tr key={ship.name}><td>{ship.name}</td>
+            <td>{ship.model}</td>
+          <td>{ship.starship_class}</td>
+          <td>{ship.manufacturer}</td>
+        <td>{ship.cost_in_credits}</td>
+      <td>{ship.length}</td>
+    <td>{ship.max_atmosphering_speed}</td>
+  <td>{ship.crew}</td>
+<td>{ship.passengers}</td>
+            <td>{ship.cargo_capacity}</td>
+          <td>{ship.consumables}</td>
+        <td>{ship.hyperdrive_rating}</td>
+      <td>{ship.MGLT}</td>
+      </tr>
         )}
-        </p>
+        </table>
       </div>
     );
   }
